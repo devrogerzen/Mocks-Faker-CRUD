@@ -25,7 +25,7 @@ export async function generatePets(count) {
     const pet = new Pet({
       name: faker.animal.petName(),
       type: faker.helpers.arrayElement(['dog', 'cat', 'bird']),
-      age: faker.datatype.number({ min: 1, max: 15 })
+      age: faker.number.int({ min: 1, max: 15 })
     });
     await pet.save();
     pets.push(pet);

@@ -25,8 +25,13 @@ router.post('/generateData', async (req, res) => {
   }
 });
 
-router.get('/mockingpets', (req, res) => {
-  res.send('Mocking pets endpoint');
+router.get('/mockingpets', async (req, res) => {
+  try {
+    const pets = await generatePets(50);
+    res.json(pets);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 });
 
 

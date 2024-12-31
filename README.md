@@ -76,3 +76,21 @@ La imagen de Docker para este proyecto está disponible en Docker Hub:
 [https://hub.docker.com/repository/docker/devrogerzen/mocksfakercrud/general]
 
 ```
+
+## Testing
+
+Explicación de las pruebas
+Conexión a la base de datos:
+
+beforeAll: Conecta a la base de datos antes de ejecutar las pruebas.
+afterAll: Cierra la conexión a la base de datos después de ejecutar las pruebas.
+Pruebas de endpoints:
+
+GET /api/mocks/mockingusers: Verifica que se generen 50 usuarios.
+POST /api/mocks/generateData: Verifica que se generen el número especificado de usuarios y mascotas.
+GET /api/mocks/mockingpets: Verifica que se generen 50 mascotas.
+GET /api/mocks/users: Verifica que se obtengan todos los usuarios de la base de datos.
+GET /api/mocks/pets: Verifica que se obtengan todas las mascotas de la base de datos.
+Beneficios de usar Jest y Supertest
+Jest: Proporciona un entorno de pruebas robusto con capacidades de mocking y manejo de pruebas asincrónicas.
+Supertest: Facilita la realización de solicitudes HTTP y la verificación de respuestas, lo que es ideal para probar endpoints de API.

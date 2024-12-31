@@ -5,7 +5,7 @@ import mocksRouter from "./routers/mocks.router.js";
 import dotenv from "dotenv";
 import swaggerUI from "swagger-ui-express";
 import swaggerJsDoc from "swagger-jsdoc";
-import {info} from "./docs/info.js";
+import { info } from "./docs/info.js";
 
 const app = express();
 
@@ -44,3 +44,5 @@ try {
 } catch (e) {
   console.log(e.message);
 }
+
+export default app;

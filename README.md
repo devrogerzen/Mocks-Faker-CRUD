@@ -11,16 +11,16 @@ MocksFakerCRUD es una aplicación de ejemplo que utiliza Node.js, Express, Mongo
 
 1. Clona el repositorio:
 
-    ```sh
-    git clone <URL_DEL_REPOSITORIO>
-    cd MocksFakerCRUD
-    ```
+   ```sh
+   git clone <URL_DEL_REPOSITORIO>
+   cd MocksFakerCRUD
+   ```
 
 2. Instala las dependencias:
 
-    ```sh
-    npm install
-    ```
+   ```sh
+   npm install
+   ```
 
 3. Configura la conexión a MongoDB Atlas en el archivo `app.js`.
 
@@ -28,9 +28,9 @@ MocksFakerCRUD es una aplicación de ejemplo que utiliza Node.js, Express, Mongo
 
 1. Inicia la aplicación:
 
-    ```sh
-    npm start
-    ```
+   ```sh
+   npm start
+   ```
 
 2. La aplicación estará disponible en `http://localhost:3001`.
 
@@ -53,3 +53,26 @@ MocksFakerCRUD es una aplicación de ejemplo que utiliza Node.js, Express, Mongo
 - `bcrypt`: ^5.1.1
 - `@faker-js/faker`: ^9.2.0
 - `mongodb`: ^6.11.0
+
+## Docker
+
+La imagen de Docker para este proyecto está disponible en Docker Hub:
+[https://hub.docker.com/r/devrogerzen/mocksfakercrudhub](https://hub.docker.com/r/devrogerzen/mocksfakercrudhub)
+
+### Comandos Docker
+
+```sh
+# Descargar la imagen desde Docker Hub
+docker pull devrogerzen/mocksfakercrudhub
+
+# Construir la imagen localmente
+docker build -t devrogerzen/mocksfakercrudhub .
+
+# Ejecutar el contenedor
+docker run -p 3001:8080 mocksfakercrudhub
+
+## Docker
+La imagen de Docker para este proyecto está disponible en Docker Hub:
+[https://hub.docker.com/repository/docker/devrogerzen/mocksfakercrud/general]
+
+```
